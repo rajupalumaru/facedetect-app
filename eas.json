@@ -1,0 +1,50 @@
+{
+  "cli": {
+    "version": ">= 3.13.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "VISION_CAMERA_ENABLE_FRAME_PROCESSORS": "1",
+        "EXPO_USE_NEW_ARCHITECTURE": "1"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "VISION_CAMERA_ENABLE_FRAME_PROCESSORS": "1",
+        "EXPO_USE_NEW_ARCHITECTURE": "1"
+      }
+    },
+    "production": {
+      "channel": "stable",
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "VISION_CAMERA_ENABLE_FRAME_PROCESSORS": "1",
+        "EXPO_USE_NEW_ARCHITECTURE": "1"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
